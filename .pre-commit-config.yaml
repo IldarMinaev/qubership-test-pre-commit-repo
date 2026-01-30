@@ -13,3 +13,11 @@ repos:
     rev: a8021f58dd751bf91ee2b2e85dbff388e693ce27
     hooks:
     -   id: org-hook
+- repo: local
+  hooks:
+    - id: echo-sample
+      name: echo-sample
+      entry: echo
+      language: system
+      args: [".pre-commit-config.yaml present"]
+      always_run: true
